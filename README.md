@@ -5,6 +5,9 @@ Mahfadha-Pro7 (CamHunter) is a powerful, professional-grade security auditing to
 
 ---
 
+### 🌟 HAY-AI PRO Integration
+This tool is part of the HAY-AI PRO ecosystem, designed for legendary security performance and ease of use.
+
 ### 🚀 Features
 - **Network Discovery**: Automatically scan local networks for IP camera devices.
 - **Fingerprinting**: Identify camera brands (Hikvision, Dahua, Reolink, etc.) and models.
