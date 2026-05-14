@@ -1,0 +1,55 @@
+# CamHunter Configuration
+# ========================
+
+network:
+  interface: null          # null = auto-detect
+  timeout: 5
+  ports:
+    - 80
+    - 443
+    - 554
+    - 8080
+    - 8443
+    - 37777     # Dahua
+    - 34567     # XMEye
+    - 81
+    - 9000
+
+scanning:
+  threads: 25
+  rate_limit: 60           # requests/sec
+  retry_count: 3
+  retry_backoff: 1.5       # multiplier per retry
+
+brute:
+  max_threads: 10
+  timeout: 10
+  stop_on_first: true
+  protocols:
+    - http
+    - rtsp
+    - onvif
+  delay_between_attempts: 0.1   # seconds
+
+proxy:
+  enabled: false
+  type: socks5             # socks5 | socks4 | http
+  host: "127.0.0.1"
+  port: 9050
+  username: null
+  password: null
+
+logging:
+  level: INFO              # DEBUG | INFO | WARNING | ERROR
+  file: "logs/camhunter.log"
+  console: true
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+
+output:
+  directory: "results"
+  database: "results/cameras.db"
+  snapshots: "results/snapshots"
+  format:
+    - json
+    - html
